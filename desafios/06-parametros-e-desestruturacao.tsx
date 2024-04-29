@@ -1,21 +1,21 @@
 function updateUserRoute({ body, params }) {
-  const { name, email, password } = body
+  const { name, email, password } = body;
 
-  updateUserController({ 
-    name, 
-    email, 
-    password, 
-  })
+  updateUserController({
+    name,
+    email,
+    password,
+  });
 }
 
 function updateUserController(data) {
-  const { name, email, password } = data
+  const { name, email, password } = data;
 
-  usersRepository.update({ 
-    name, 
-    email, 
-    password, 
-  })
+  usersRepository.update({
+    name,
+    email,
+    password,
+  });
 }
 
 const usersRepository = {
@@ -24,9 +24,9 @@ const usersRepository = {
 
     return {
       user,
-    }
+    };
   },
-}
+};
 
 // updateUserRoute({
 //   body: { name, email, password },
